@@ -129,6 +129,17 @@ module Iamport
       pay_get(uri)
     end
 
+    # https://api.iamport.kr/#!/certifications/getCertification
+    def get_certification(imp_uid)
+      uri = "certifications/#{imp_uid}"
+      pay_get(uri)
+    end
+
+    def delete_certification(imp_uid)
+      uri = "certifications/#{imp_uid}"
+      pay_delete(uri)
+    end
+
     private
 
     # Get header data
